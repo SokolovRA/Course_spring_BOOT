@@ -42,4 +42,8 @@ public class NewController {
         employeeService.deleteEmployee(id);
         return "Person with id = " + id + " was deleted";
     }
+    @GetMapping("/employee/name/{name}")
+    public List<Employee> findAllByName(@PathVariable String name){
+        return employeeService.findAllByName(name);
+    }
 }
